@@ -8,6 +8,7 @@
  */
 
 import React, { Component, PropTypes } from 'react';
+import Link  from '../Link';
 import s from './Translations.scss';
 import withStyles from '../../decorators/withStyles';
 import classnames from 'classnames';
@@ -21,6 +22,10 @@ import translations from 'json!yaml!./translations.sample.yml';
 @withStyles(s)
 class TranslationsPage extends Component {
 
+  static propTypes = {
+    query: React.PropTypes.object.isRequired,
+  };
+
   static contextTypes = {
     onSetTitle: PropTypes.func.isRequired,
   };
@@ -29,17 +34,37 @@ class TranslationsPage extends Component {
     this.context.onSetTitle(title);
   }
 
-  render() {
+  renderCallToActions() {
     return (
       <div className={s.root}>
         <h1>{title}</h1>
         <div className={classes('translations-actions')}>
-          <button className={classes('btn', 'btn-success', 'btn-lg')}>{'Translate texts for customers'}</button>
+          <Link to="/translations" query={{ audience: 'customers' }} className={classes('btn', 'btn-primary', 'btn-lg')}>
+            {'Translate texts for customers'}
+          </Link>
           <p className={classes('buttons-spacer')}><span>or</span></p>
-          <button className={classes('btn', 'btn-default')}>{'Translate texts for shop employees'}</button>
+          <Link to="/translations" query={{ audience: 'employees' }} className={classes('btn', 'btn-secondary')}>
+            {'Translate texts for shop employees'}
+          </Link>
         </div>
       </div>
     );
+  }
+
+  renderTranslationInterface() {
+    return (
+      <div>
+        Ohai!
+      </div>
+    );
+  }
+
+  render() {
+    if (this.props.query.audience) {
+      return this.renderTranslationInterface();
+    } else {
+      return this.renderCallToActions();
+    }
   }
 
 }

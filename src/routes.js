@@ -25,7 +25,8 @@ const router = new Router(on => {
     return component && <App context={state.context}>{component}</App>;
   });
 
-  on('/', async () => <Translations />);
+  on('/translations', async ({ query }) => <Translations query={query}/>);
+  on('/', async () => <Translations query={{ }}/>);
 
   on('/contact', async () => <ContactPage />);
 
