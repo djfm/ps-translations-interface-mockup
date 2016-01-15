@@ -11,10 +11,14 @@
 @import '~bootstrap/scss/bootstrap.scss';
 
 .buttons-spacer {
-    margin: $spacing 0 $spacing $spacing;
-    font-size: 2em;
+  margin: $spacing 0 $spacing $spacing;
+  font-size: 2em;
 }
 
 .translations-actions {
-    margin: 2*$spacing 0;
+  margin: 2*$spacing 0;
+}
+
+.domain-wrapper {
+  margin-left: $spacing;
 }

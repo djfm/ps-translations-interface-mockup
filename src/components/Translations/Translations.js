@@ -8,7 +8,7 @@
  */
 
 import React, { Component, PropTypes } from 'react';
-import Link  from '../Link';
+import Link from '../Link';
 import s from './Translations.scss';
 import withStyles from '../../decorators/withStyles';
 import classnames from 'classnames';
@@ -18,6 +18,9 @@ const classes = (...names) => classnames(names.map(name => s[name]));
 const title = 'Translations';
 
 import translations from 'json!yaml!./translations.sample.yml';
+import { getDomainsForAudience } from './translationsUtils';
+
+import DomainsOrTranslations from './DomainsOrTranslations';
 
 @withStyles(s)
 class TranslationsPage extends Component {
@@ -52,11 +55,12 @@ class TranslationsPage extends Component {
   }
 
   renderTranslationInterface() {
-    return (
-      <div>
-        Ohai!
-      </div>
+    const domains = getDomainsForAudience(
+      this.props.query.audience,
+      translations
     );
+
+    return <DomainsOrTranslations data={domains} />;
   }
 
   render() {
