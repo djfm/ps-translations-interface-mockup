@@ -30,7 +30,9 @@
     "babel-eslint": "^4.1.6",
     "babel-loader": "^5.4.0",
     "babel-plugin-react-transform": "^1.1.1",
+    "bootstrap": "^4.0.0-alpha.2",
     "browser-sync": "^2.10.1",
+    "classnames": "^2.2.1",
     "css-loader": "^0.23.0",
     "csscomb": "^3.1.8",
     "del": "^2.2.0",
@@ -49,6 +51,7 @@
     "lodash.merge": "^3.3.2",
     "mkdirp": "^0.5.1",
     "ncp": "^2.0.0",
+    "node-sass": "^3.4.2",
     "postcss": "^5.0.13",
     "postcss-import": "^7.1.3",
     "postcss-loader": "^0.8.0",
@@ -58,10 +61,12 @@
     "react-transform-hmr": "^1.0.1",
     "redbox-react": "^1.2.0",
     "replace": "^0.3.0",
+    "sass-loader": "^3.1.2",
     "url-loader": "^0.5.7",
     "webpack": "^1.12.9",
     "webpack-hot-middleware": "^2.6.0",
-    "webpack-middleware": "^1.4.0"
+    "webpack-middleware": "^1.4.0",
+    "yaml-loader": "^0.1.0"
   },
   "jest": {
     "rootDir": "./src",

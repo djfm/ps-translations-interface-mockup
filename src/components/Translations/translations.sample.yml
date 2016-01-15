@@ -1,0 +1,11 @@
+Customer:
+  Firstname: Prénom
+  Lastname: Nom
+Address:
+  Street: Rue
+fo:
+  Checkout:
+    Continue: Continuer
+bo:
+  Save: Enregister
+  Save and stay: Enregister et rester

@@ -78,7 +78,7 @@ const config = {
           'isomorphic-style-loader',
           'css-loader?' + (DEBUG ? 'sourceMap&' : 'minimize&') +
           'modules&localIdentName=[name]_[local]_[hash:base64:3]',
-          'postcss-loader',
+          'sass-loader',
         ],
       }, {
         test: /\.json$/,

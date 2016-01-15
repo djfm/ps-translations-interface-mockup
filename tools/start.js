@@ -81,6 +81,7 @@ async function start() {
         if (!err) {
           const bs = Browsersync.create();
           bs.init({
+            browser: 'google-chrome-unstable',
             proxy: {
               target: host,
               middleware: [wpMiddleware, ...hotMiddlewares],

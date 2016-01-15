@@ -8,12 +8,13 @@
  */
 
 @import '../variables.scss';
+@import '~bootstrap/scss/bootstrap.scss';
 
-.root {
-
+.buttons-spacer {
+    margin: $spacing 0 $spacing $spacing;
+    font-size: 2em;
 }
 
-.container {
-  margin: 0 auto;
-  padding: 0 0 40px;
+.translations-actions {
+    margin: 2*$spacing 0;
 }
