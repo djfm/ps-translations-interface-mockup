@@ -43,11 +43,11 @@ class TranslationsPage extends Component {
         <h1>{title}</h1>
         <div className={classes('translations-actions')}>
           <Link to="/translations" query={{ audience: 'customers' }} className={classes('btn', 'btn-primary', 'btn-lg')}>
-            {'Translate texts for customers'}
+            {'Translate texts for your customers'}
           </Link>
           <p className={classes('buttons-spacer')}><span>or</span></p>
           <Link to="/translations" query={{ audience: 'employees' }} className={classes('btn', 'btn-secondary')}>
-            {'Translate texts for shop employees'}
+            {'Translate texts for your shop employees'}
           </Link>
         </div>
       </div>
