@@ -65,7 +65,14 @@ class TranslationsPage extends Component {
 
   render() {
     if (this.props.query.audience) {
-      return this.renderTranslationInterface();
+      return (
+        <div>
+          <Link to="/translations" className={classes('btn', 'btn-secondary')}>
+            {'Back to translations'}
+          </Link>
+          {this.renderTranslationInterface()}
+        </div>
+      );
     } else {
       return this.renderCallToActions();
     }
