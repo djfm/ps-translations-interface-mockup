@@ -21,4 +21,18 @@
 
 .domain-wrapper {
   margin-left: $spacing;
+  > span {
+    font-weight: bold;
+  }
+}
+
+.translation-wrapper {
+  .string {
+  }
+
+  .translation {
+    textarea {
+      width: 100%;
+    }
+  }
 }
