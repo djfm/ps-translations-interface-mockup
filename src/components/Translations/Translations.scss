@@ -20,7 +20,8 @@
 }
 
 .domain-wrapper {
-  margin-left: $spacing;
+  padding-left: $spacing;
+  border-left: 1px solid #ccc;
   > span {
     font-weight: bold;
   }
@@ -39,4 +40,8 @@
   a {
     cursor: pointer;
   }
+}
+
+._v_apart {
+  margin: 2 * $spacing 0
 }
